@@ -8,7 +8,7 @@ EAV Dynamic Attributes for Yii2
 Архитектура баз данных EAV(Enity-Attribute-Value, Сущность-Атрибут-Значение)
 =======
 
-[](https://yadi.sk/d/-QA8kkMonaorF)
+[](https://yadi.sk/d/-QA8kkMonaorF) 
 
 ![](https://leto37g.storage.yandex.net/rdisk/39e002d318fd33be41970b967b4303c37a1f4b16403d63682ab886d651ce802a/inf/Hog8_iKY1Wf6sUzNXwwgMSF5sTcPdaFgbR-Kev1KBV5sArQFlpqATaNEgJIrClgwB4eC4zSs9Zb6gn5qKFu2og==?uid=0&filename=2015-10-20%2019-27-25%20Update%20Product%20%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%201%20-%20Google%20Chrome.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&rtoken=59fdb448c386267c139e95574b212b70&force_default=no&ycrid=na-867e638af3256a70a221ab782049b1dc-downloader5g)
 
