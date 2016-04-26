@@ -23,7 +23,7 @@ TEMPLATE;
 TEMPLATE;
     
     static $addButton = <<<TEMPLATE
-    <span class='symbol'><span class='fa fa-font'></span></span> Input textarea    
+    <span class='symbol'><span class='fa fa-paragraph'></span></span> Input textarea    
 TEMPLATE;
     
     static $defaultAttributes = <<<TEMPLATE

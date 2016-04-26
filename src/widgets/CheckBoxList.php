@@ -36,7 +36,7 @@ TEMPLATE;
 TEMPLATE;
     
     static $addButton = <<<TEMPLATE
-    <span class=\"symbol\"><span class=\"fa fa-square-o\"></span></span> Checkboxes    
+    <span class="symbol"><span class="fa fa-square-o"></span></span> Checkboxes    
 TEMPLATE;
     
     static $defaultAttributes = <<<TEMPLATE

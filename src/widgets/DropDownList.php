@@ -33,7 +33,7 @@ TEMPLATE;
 TEMPLATE;
     
     static $addButton = <<<TEMPLATE
-    <span class=\"symbol\"><span class=\"fa fa-caret-down\"></span></span> Dropdown    
+    <span class="symbol"><span class="fa fa-caret-down"></span></span> Dropdown    
 TEMPLATE;
     
     static $defaultAttributes = <<<TEMPLATE
