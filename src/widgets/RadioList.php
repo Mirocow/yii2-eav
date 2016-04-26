@@ -38,7 +38,7 @@ TEMPLATE;
 TEMPLATE;
     
     static $addButton = <<<TEMPLATE
-    <span class=\"symbol\"><span class=\"fa fa-circle-o\"></span></span> Radio    
+    <span class="symbol"><span class="fa fa-circle-o"></span></span> Radio    
 TEMPLATE;
     
     static $defaultAttributes = <<<TEMPLATE
