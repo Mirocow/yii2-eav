@@ -12,12 +12,16 @@ use Yii;
  * This is the model class for table "{{%eav_attribute}}".
  *
  * @property integer $id
+ * @property integer $entityId 
  * @property integer $typeId
+ * @property string $type 
  * @property string $name
  * @property string $label
  * @property string $defaultValue
  * @property integer $defaultOptionId
  * @property integer $required
+ * @property integer $order 
+ * @property string $description 
  *
  * @property EavAttributeOption $defaultOption
  * @property EavAttributeType $type
@@ -40,7 +44,9 @@ class EavAttribute extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'defaultValue', 'entityModel', 'label'], 'string', 'max' => 255],
+            [['name', 'defaultValue', 'entityModel', 'label', 'description'], 'string', 'max' => 255],
+            [['type'], 'string', 'max' => 50],
+            [['entityId', 'order'], 'integer'],
             //[['categoryId', 'typeId', 'defaultOptionId'], 'integer'],
             [['required'], 'boolean'],
             //[['defaultOptionId'], 'exist', 'skipOnError' => true, 'targetClass' => EavAttributeOption::className(), 'targetAttribute' => ['defaultOptionId' => 'id']],
@@ -56,11 +62,14 @@ class EavAttribute extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'typeId' => 'Type ID',
+            'type' => 'Type',
             'name' => 'Name',
             'label' => 'Label',
             'defaultValue' => 'Default Value',
             'defaultOptionId' => 'Default Option ID',
             'required' => 'Required',
+            'order' => 'Order',
+            'description' => 'Description',
         ];
     }
 
@@ -103,4 +112,16 @@ class EavAttribute extends \yii\db\ActiveRecord
     {
         return $this->hasMany(EavAttributeValue::className(), ['attributeId' => 'id']);
     }
+    
+    public function getbootstrapData()
+    {
+      return [
+        'cid' => '',
+        'label' => '',
+        'field_type' => '',
+        'required' => '',
+        'field_options' => [],      
+      ];
+    }
+        
 }

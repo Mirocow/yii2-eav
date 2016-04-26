@@ -13,6 +13,7 @@ use Yii;
  * @property integer $id
  * @property integer $attributeId
  * @property string $value
+ * @property string $defaultOptionId
  *
  * @property EavAttribute[] $eavAttributes
  * @property EavAttribute $attribute
@@ -34,7 +35,7 @@ class EavAttributeOption extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['attributeId'], 'integer'],
+            [['attributeId', 'defaultOptionId'], 'integer'],
             [['value'], 'string', 'max' => 255],
             //[['attributeId'], 'exist', 'skipOnError' => true, 'targetClass' => EavAttribute::className(), 'targetAttribute' => ['attributeId' => 'id']],
         ];
@@ -49,6 +50,7 @@ class EavAttributeOption extends \yii\db\ActiveRecord
             'id' => 'ID',
             'attributeId' => 'Attribute ID',
             'value' => 'Value',
+            'defaultOptionId' => 'Default option Id',
         ];
     }
 
@@ -57,7 +59,8 @@ class EavAttributeOption extends \yii\db\ActiveRecord
      */
     public function getEavAttributes()
     {
-        return $this->hasMany(EavAttribute::className(), ['defaultOptionId' => 'id']);
+        return $this->hasMany(EavAttribute::className(), ['defaultOptionId' => 'id'])
+          ->orderBy(['order' => SORT_DESC]);
     }
 
     /**

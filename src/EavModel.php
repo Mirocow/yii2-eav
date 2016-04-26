@@ -125,6 +125,11 @@ class EavModel extends BaseEavModel
 
     public function save($runValidation = true, $attributes = null)
     {
+        if(!$this->handlers){
+          Yii::info('Dynamic model data were no attributes.', __METHOD__);
+          return false;
+        }
+        
         if ($runValidation && !$this->validate($attributes)) {
             Yii::info('Dynamic model data were not save due to validation error.', __METHOD__);
             return false;

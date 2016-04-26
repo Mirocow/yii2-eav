@@ -26,7 +26,7 @@ class m150821_133232_init extends Migration
             
         $this->attributeTypes = [
             [
-                'name' => 'raw', 
+                'name' => 'text', 
                 'storeType' => ValueHandler::STORE_TYPE_RAW, 
                 'handlerClass' => '\mirocow\eav\widgets\TextInput',
             ],
@@ -36,7 +36,7 @@ class m150821_133232_init extends Migration
                 'handlerClass' => '\mirocow\eav\widgets\DropDownList',
             ],
             [
-                'name' => 'multiple', 
+                'name' => 'checkbox', 
                 'storeType' => ValueHandler::STORE_TYPE_MULTIPLE_OPTIONS, 
                 'handlerClass' => '\mirocow\eav\widgets\CheckBoxList',
             ],

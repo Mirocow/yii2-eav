@@ -37,7 +37,7 @@ class AttributeHandler extends Widget
     {
         if (!class_exists($class = $attributeModel->eavType->handlerClass))
         {
-            throw new InvalidParamException('Unknown class: ' . $class);
+            throw new InvalidParamException('Unknown handler class: ' . $class);
         }
 
         $handler = Yii::createObject([

@@ -52,6 +52,7 @@ class EavEntity extends \yii\db\ActiveRecord
      */
     public function getEavAttributes()
     {
-        return $this->hasMany(EavAttribute::className(), ['entityId' => 'id']);
+        return $this->hasMany(EavAttribute::className(), ['entityId' => 'id'])
+          ->orderBy(['order' => SORT_DESC]);
     }
 }
