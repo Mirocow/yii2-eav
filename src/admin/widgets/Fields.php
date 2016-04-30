@@ -45,6 +45,7 @@ class Fields extends Widget
             foreach($attr->eavOptions as $option){
               $options['options'][] = [
                 'label' => $option->value,
+                'id' => $option->id,
                 'checked' => (bool) $option->defaultOptionId,
               ];
             }
