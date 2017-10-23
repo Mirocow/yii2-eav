@@ -19,7 +19,7 @@ class m160501_124615_create_table_eav_attribute_rules extends Migration
         $this->createTable('{{%eav_attribute_rules}}', [
             'id' => $this->primaryKey(),
             'attributeId' => $this->integer(11)->defaultValue(0),
-            'rules' => $this->text()->defaultValue(''),
+            'rules' => $this->text()/*->defaultValue('')*/,
         ], $options);
 
         $this->addForeignKey('FK_Rules_attributeId',
