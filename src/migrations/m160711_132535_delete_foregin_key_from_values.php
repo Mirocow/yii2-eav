@@ -10,18 +10,8 @@ class m160711_132535_delete_foregin_key_from_values extends Migration
             'FK_Value_optionId',
             '{{%eav_attribute_value}}'
         );
-
-        $this->dropIndex(
-            'FK_Value_optionId',
-            '{{%eav_attribute_value}}'
-        );
         
         $this->dropForeignKey(
-            'FK_Value_entityId',
-            '{{%eav_attribute_value}}'
-        );
-
-        $this->dropIndex(
             'FK_Value_entityId',
             '{{%eav_attribute_value}}'
         );
