@@ -23,7 +23,7 @@ class m160501_124615_create_table_eav_attribute_rules extends Migration
             [
                 'id' => $this->primaryKey(),
                 'attributeId' => $this->integer(11)->defaultValue(0),
-                'rules' => $this->text()->defaultValue(''),
+                'rules' => $this->text(),
             ],
             $options
         );
